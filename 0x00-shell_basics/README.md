@@ -1,0 +1,1 @@
+0-current_working_directory you can see path-name of the current working
