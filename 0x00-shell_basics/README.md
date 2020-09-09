@@ -4,3 +4,4 @@
 3-listfiles display current directory contents in a long format.
 4-listmorefiles Display current directory contents, including hidden files.
 5-listfilesdigitonly Display current directory Long format, with user and group
+6-firstdirectory create directory named holberton
