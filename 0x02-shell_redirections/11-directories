@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -print | wc -l
+ls -laR | find . -type d ! -iname "." | wc -l
