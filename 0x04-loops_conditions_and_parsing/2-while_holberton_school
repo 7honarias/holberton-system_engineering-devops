@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#print with while 10 times
+
+count=1
+while [[ "$count" -le 10 ]]; do
+      echo "Holberton School"
+      count=$((count + 1))
+done
