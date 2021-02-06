@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# display conten of the current directory
+
+for files in *; do
+    echo "$files" | cut -d "-" -f2
+done
