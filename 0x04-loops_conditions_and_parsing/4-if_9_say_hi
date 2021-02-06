@@ -2,12 +2,9 @@
 # print 10 times and Hi in 9th position
 
 count=1
-
 while [[ "$count" -le 10 ]]; do
       if [ "$count" -eq 9 ]; then
       	 echo "Hi"
-	 count=$((count + 1))
-	 continue
       fi
       echo "Holberton School"
       count=$((count + 1))
