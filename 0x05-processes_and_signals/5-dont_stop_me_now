@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#terminated process
+v_pid=$(pgrep -f '4-to_infinity_and_beyond')
+kill -15 $v_pid
