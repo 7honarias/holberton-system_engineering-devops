@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# run Apache return Hello Holberton
+
+sudo service apache2 start
