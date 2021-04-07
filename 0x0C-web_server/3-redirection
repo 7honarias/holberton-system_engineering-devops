@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # configure your Nginx
-REDIT="\\\n\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=ZyhrYis509A}\n"
+STRING="\\\n\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=3MbaGJN2ioQ;\n\t}\n"
 apt-get -y update
 apt-get -y install nginx
-echo "Holberto School" > /var/www/html/index.html
+echo "Holberton School" > /var/www/html/index.html
 FIND=$(grep "redirect_me" /etc/nginx/sites-available/default)
 if [[ -z $FIND ]]; then
-    sed -i "42i $REDIT" /etc/nginx/sities-available/default
+    sed -i "42i $STRING" /etc/nginx/sites-available/default
     service nginx restart
 fi
