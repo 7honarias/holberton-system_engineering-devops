@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# run the containet fit the above equirements
+
+pkill -f apache2
+chown nginx:nginx /etc/nginx/nginx.conf
+chmod 700 /etc/nginx/nginx.conf
+sed -i 's/80 defaul_server/8080 defaul_server/' /etc/nginx/sites-available/defaul
+sudo -u nginx service nginx start
