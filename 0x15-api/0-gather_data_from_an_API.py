@@ -5,6 +5,7 @@ from sys import argv
 
 
 def api_show(argv):
+    """ print to stdout"""
     id_user = str(argv[1])
     number_of_done_tasks = 0
     total_number_of_tasks = 0
