@@ -24,4 +24,4 @@ for task in tasks:
 
 print("Employee {} is done with task({}/{}):"
       .format(employee_name, number_of_done_tasks, total_number_of_tasks))
-print('{}'.format(task_title))
+print('{}'.format(task_title), end='')
