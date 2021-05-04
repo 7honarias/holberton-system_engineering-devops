@@ -17,9 +17,9 @@ if __name__ == '__main__':
     for task in todo:
         dir_task['task'] = task.get('title')
         dir_task['completed'] = task.get('completed')
-        dir_task['username'] = task.get('username')
+        dir_task['username'] = user.get('username')
         list_task.append(dir_task)
     jsonobj = {}
-    jsonobj[userId] = list_tasks
+    jsonobj[userId] = list_task
     with open(file_json, 'w') as jsonfile:
         json.dump(jsonobj, jsonfile)
