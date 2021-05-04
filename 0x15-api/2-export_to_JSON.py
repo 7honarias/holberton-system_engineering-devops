@@ -19,6 +19,7 @@ if __name__ == '__main__':
         dir_task['completed'] = task.get('completed')
         dir_task['username'] = task.get('username')
         list_task.append(dir_task)
-
-    with open(file_json, 'w', newline='') as jsonfile:
-        json.dump({argv[1]: list_task}, jsonfile)
+    jsonobj = {}
+    jsonobj[userId] = list_tasks
+    with open(file_json, 'w') as jsonfile:
+        json.dump(jsonobj, jsonfile)
