@@ -11,10 +11,10 @@ if __name__ == '__main__':
                         format(userId), verify=False).json()
     todo = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".
                         format(userId), verify=False).json()
-    file_json = argv[1] + '.json'
+    file_json = '{}.json'.format(userId)
     list_task = []
-    dir_task = {}
     for task in todo:
+        dir_task = {}
         dir_task['task'] = task.get('title')
         dir_task['completed'] = task.get('completed')
         dir_task['username'] = user.get('username')
