@@ -64,7 +64,7 @@ server {
 
         location /airbnb-onepage {
                 include proxy_params;
-                proxy_pass http://unix:/home/ubuntu/AirBnB_clone_v2/star_service.sock;
+                proxy_pass http://0.0.0.0:5000/0-hello_route;
         }
 
         # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
