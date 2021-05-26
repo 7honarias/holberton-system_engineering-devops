@@ -22,7 +22,7 @@ server {
         # listen 443 ssl default_server;
 
         add_header X-Served-By 2224-web-01;
-
+        server_name 35.196.67.203;
 
         # listen [::]:443 ssl default_server;
         #
@@ -42,6 +42,11 @@ server {
         location /hbnb_static/ {
                  alias /data/web_static/current/;
         }
+        location /airbnb-dynamic/numer_odd_or_even/ {
+                 rewrite /airbnb-dynamic/number_odd_or_even/(.*) $1 break;
+                 include proxy_params;
+                 proxy_pass http://0.0.0.0:5001/number_odd_or_even/$1;   
+        }
 
         root /var/www/html;
 
@@ -50,8 +55,7 @@ server {
 
         error_page 404 /custom_404.html;
 
-
-        server_name 35.196.67.203;
+        server_name _;
 
         location /redirect_me {
                  return 301 https://www.youtube.com/watch?v=3MbaGJN2ioQ;
